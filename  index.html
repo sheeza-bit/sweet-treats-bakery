@@ -1,0 +1,78 @@
+/bakery_website/ index.html<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Bakery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">🍰 Bakery</div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <ul class="menu" id="menu">
+  <a href="index.html" class="active">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+  </ul>
+</nav>
+
+<!-- Header -->
+<header>
+  <h1>🍰 Sweet Bakery</h1>
+  <p>Fresh Cakes & Delicious Treats</p>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <h2>Welcome to Our Bakery</h2>
+  <p>We bake happiness for every occasion 🎂</p>
+  <img src="cake.jpg" class="cake-img">
+</section>
+
+<button class="btn">Order Now</button>
+
+<!-- Products -->
+<section class="products">
+  <h2>Our Cakes</h2>
+
+  <div class="card">🎂 Chocolate Cake</div>
+  <div class="card">🍓 Strawberry Cake</div>
+  <div class="card">🧁 Cupcakes</div>
+</section>
+
+<!-- Gallery -->
+<section class="gallery">
+  <h2>Gallery</h2>
+
+  <img src="cake.jpg" class="gallery-img">
+  <img src="cake.jpg" class="gallery-img">
+</section>
+
+<!-- Contact -->
+<section class="contact">
+  <h2>Contact Us</h2>
+
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" placeholder="Your Message"></textarea>
+
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 Sweet Bakery</p>
+</footer>
+
+<script src="input.js"></script>
+
+</body>
+</html>
