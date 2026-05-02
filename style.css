@@ -5,42 +5,24 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
-/* BODY */
 body {
-  background: #fff;
+  background: #fff0f5; /* light pink */
+  font-family: 'Poppins', sans-serif;
   color: #333;
 }
 
-/* NAVBAR */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #ff4d88;
-  padding: 15px 20px;
+  background: #ff69b4;
+  padding: 15px;
   color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
 }
 
 .menu li a {
-  text-decoration: none;
   color: white;
-  font-weight: 500;
-  transition: 0.3s;
+  text-decoration: none;
+}
+
+
 }
 
 .menu li a:hover {
