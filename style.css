@@ -3,174 +3,101 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-body {
-  background: #fff0f5; /* light pink */
   font-family: 'Poppins', sans-serif;
+}
+
+/* BODY */
+body {
+  background: #fff0f5;
   color: #333;
 }
 
+/* NAVBAR */
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: #ff69b4;
-  padding: 15px;
+  padding: 15px 20px;
+}
+
+/* LOGO */
+.logo {
   color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* MENU */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
 .menu li a {
-  color: white;
   text-decoration: none;
-}
-
-
+  color: white;
+  font-weight: 500;
 }
 
 .menu li a:hover {
-  opacity: 0.7;
-}
-
-/* MOBILE MENU */
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
+  text-decoration: underline;
 }
 
 /* HEADER */
 header {
   text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(to bottom, #ffe6ee, #fff);
+  padding: 50px 20px;
+  background: #ffe4ec;
 }
 
-header h1 {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.hero h1 {
-  font-size: 28px;
-}
-
-.hero p {
-  margin-top: 10px;
-  color: #666;
-}
-
-.hero img {
-  width: 90%;
-  max-width: 320px;
-  margin-top: 20px;
-  border-radius: 15px;
-}
-
-/* SECTION TITLE */
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
+header p {
+  font-size: 18px;
 }
 
 /* GALLERY */
 .gallery {
-  padding: 30px 20px;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.gallery img {
-  width: 100%;
-  max-width: 300px;
+.gallery h2 {
+  margin-bottom: 20px;
+  color: #ff69b4;
+}
+
+.gallery-img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
   margin: 10px;
-  border-radius: 15px;
-}
-
-/* SERVICES */
-.services {
-  padding: 30px 20px;
-  text-align: center;
-}
-
-.service-box {
-  background: #fff;
-  margin: 15px auto;
-  padding: 20px;
-  border-radius: 15px;
-  max-width: 350px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-
-/* ABOUT */
-.about {
-  padding: 30px 20px;
-  background: #ff4d88;
-  color: white;
-  text-align: center;
-}
-
-.why-box {
-  background: white;
-  color: #333;
-  margin: 10px auto;
-  padding: 15px;
-  border-radius: 15px;
-  max-width: 350px;
-}
-
-/* CONTACT */
-.contact {
-  padding: 30px 20px;
-  text-align: center;
-  background: #ff4d88;
-  color: white;
-}
-
-input, textarea {
-  width: 90%;
-  padding: 12px;
-  margin: 10px 0;
   border-radius: 10px;
-  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
 }
 
-button {
-  background: white;
-  color: #ff4d88;
-  padding: 12px 25px;
-  border-radius: 25px;
-  border: none;
-  font-weight: bold;
+.gallery-img:hover {
+  transform: scale(1.05);
 }
 
-/* FOOTER */
+/* FOOTER (agar use karo) */
 footer {
   text-align: center;
-  padding: 15px;
-  background: #ff4d88;
+  padding: 20px;
+  background: #ff69b4;
   color: white;
+  margin-top: 40px;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 @media (max-width: 768px) {
   .menu {
-    display: none;
     flex-direction: column;
-    background: #ff4d88;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 150px;
-    padding: 10px;
+    display: none;
   }
 
-  .menu.show {
+  .menu.active {
     display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
   }
 }
