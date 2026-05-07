@@ -1,45 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sweet Treats Bakery</title>
+  <title>Contact Us | Sweet Treats Bakery</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
 </head>
 
-<body>
+<body class="bg-orange-50 text-gray-800">
 
-<nav class="navbar">
+<!-- Navbar -->
+<nav class="bg-white shadow-md py-4 px-6 flex justify-between items-center sticky top-0 z-50">
+  <div class="text-2xl font-bold text-orange-600">🍰 Sweet Treats</div>
+  
+  <div class="md:hidden text-2xl cursor-pointer text-orange-600" onclick="toggleMenu()">☰</div>
 
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-  <ul class="menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="contact.html">Contact</a></li>
+  <ul id="mobile-menu" class="hidden md:flex space-x-8 font-medium text-gray-600">
+    <li><a href="index.html" class="hover:text-orange-600 transition">Home</a></li>
+    <li><a href="about.html" class="hover:text-orange-600 transition">About</a></li>
+    <li><a href="services.html" class="hover:text-orange-600 transition">Services</a></li>
+    <li><a href="contact.html" class="text-orange-600 font-bold underline decoration-2 underline-offset-4">Contact</a></li>
   </ul>
-
 </nav>
 
-<div class="container">
+<div class="max-w-xl mx-auto px-6 py-20">
 
   <!-- Contact Section -->
-  <section class="contact">
-    <h1>Contact Us</h1>
+  <section class="bg-white p-10 md:p-14 rounded-[3rem] shadow-2xl border border-orange-100">
+    <h1 class="text-4xl font-black text-center mb-10 text-gray-900 uppercase italic">Contact Us</h1>
 
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name"><br><br>
-      <input type="email" id="email" placeholder="Your Email"><br><br>
-      <textarea id="message" placeholder="Your Message"></textarea><br><br>
-      <button type="submit">Send</button>
+    <form id="contactForm" class="space-y-6">
+      <div>
+        <input type="text" id="name" placeholder="Your Name" 
+               class="w-full p-4 bg-orange-50 rounded-2xl outline-none border border-transparent focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-all shadow-sm">
+      </div>
+
+      <div>
+        <input type="email" id="email" placeholder="Your Email" 
+               class="w-full p-4 bg-orange-50 rounded-2xl outline-none border border-transparent focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-all shadow-sm">
+      </div>
+
+      <div>
+        <textarea id="message" placeholder="Your Message" rows="5" 
+                  class="w-full p-4 bg-orange-50 rounded-2xl outline-none border border-transparent focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-all shadow-sm resize-none"></textarea>
+      </div>
+
+      <button type="submit" 
+              class="w-full bg-orange-600 text-white py-4 rounded-2xl font-black text-xl hover:bg-orange-700 transition shadow-lg hover:shadow-orange-200 uppercase tracking-widest">
+        Send Message
+      </button>
     </form>
-
   </section>
 
 </div>
 
-<script src="input.js"></script>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-8 text-center mt-auto">
+  <p class="opacity-60 text-sm tracking-widest uppercase italic">© 2026 Sweet Treats Bakery</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+    menu.classList.toggle('flex');
+    menu.classList.toggle('flex-col');
+    menu.classList.toggle('absolute');
+    menu.classList.toggle('top-16');
+    menu.classList.toggle('left-0');
+    menu.classList.toggle('w-full');
+    menu.classList.toggle('bg-white');
+    menu.classList.toggle('p-6');
+  }
+</script>
+
+</body>
+</html>
