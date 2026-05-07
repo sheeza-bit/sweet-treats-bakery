@@ -1,60 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sweet Treats Bakery</title>
+  <title>Services | Sweet Treats Bakery</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   
-<body>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
+</head>
+
+<body class="bg-orange-50 text-gray-800">
 
 <!-- Navbar -->
-<nav class="navbar">
-  <div class="logo">🍰 Sweet Treats</div>
+<nav class="bg-white shadow-md py-4 px-6 flex justify-between items-center sticky top-0 z-50">
+  <div class="text-2xl font-bold text-orange-600">🍰 Sweet Treats</div>
 
-  <ul class="menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="contact.html">Contact</a></li>
+  <ul class="hidden md:flex space-x-8 font-medium text-gray-600">
+    <li><a href="index.html" class="hover:text-orange-600 transition">Home</a></li>
+    <li><a href="about.html" class="hover:text-orange-600 transition">About</a></li>
+    <li><a href="services.html" class="text-orange-600 font-bold underline decoration-2 underline-offset-4">Services</a></li>
+    <li><a href="contact.html" class="hover:text-orange-600 transition">Contact</a></li>
   </ul>
 </nav>
 
 <!-- Main Content -->
-<div class="container">
+<div class="max-w-6xl mx-auto px-6 py-20">
 
-  <section class="services">
-    <h1>Our Services</h1>
+  <section class="text-center">
+    <h1 class="text-4xl md:text-5xl font-black text-gray-900 mb-12 uppercase tracking-tight italic">Our Services</h1>
 
-    <div class="service-box">
-      <h3>🎂 Custom Cakes</h3>
-      <p>We design cakes for birthdays, weddings & events.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+      <!-- Service Card 1 -->
+      <div class="bg-white p-10 rounded-[2.5rem] shadow-lg border border-orange-100 hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+        <div class="text-5xl mb-6">🎂</div>
+        <h3 class="text-2xl font-bold text-orange-700 mb-4 uppercase italic tracking-tighter">Custom Cakes</h3>
+        <p class="text-gray-600 leading-relaxed">
+          We design cakes for birthdays, weddings & special events tailored to your needs.
+        </p>
+      </div>
+
+      <!-- Service Card 2 -->
+      <div class="bg-white p-10 rounded-[2.5rem] shadow-lg border border-orange-100 hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+        <div class="text-5xl mb-6">🧁</div>
+        <h3 class="text-2xl font-bold text-orange-700 mb-4 uppercase italic tracking-tighter">Cupcakes</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Fresh, bite-sized cupcakes in a variety of delicious flavors baked daily.
+        </p>
+      </div>
+
+      <!-- Service Card 3 -->
+      <div class="bg-white p-10 rounded-[2.5rem] shadow-lg border border-orange-100 hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+        <div class="text-5xl mb-6">🚚</div>
+        <h3 class="text-2xl font-bold text-orange-700 mb-4 uppercase italic tracking-tighter">Fast Delivery</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Quick and safe delivery at your doorstep to keep your treats fresh and intact.
+        </p>
+      </div>
+
     </div>
-
-    <div class="service-box">
-      <h3>🧁 Cupcakes</h3>
-      <p>Fresh cupcakes in different flavors.</p>
-    </div>
-
-    <div class="service-box">
-      <h3>🚚 Fast Delivery</h3>
-      <p>Quick delivery at your doorstep.</p>
-    </div>
-
   </section>
 
 </div>
 
 <!-- Footer -->
-<footer>
-  <p>© 2026 Sweet Treats Bakery</p>
+<footer class="bg-gray-900 text-white py-10 text-center mt-20">
+  <p class="opacity-70 text-sm tracking-widest uppercase italic font-medium">© 2026 Sweet Treats Bakery</p>
 </footer>
 
-<script src="input.js"></script>
-
 </body>
-
-
+</html>
