@@ -1,49 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sweet Treats Bakery</title>
+  <title>About Us | Sweet Treats Bakery</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
   <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-</head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<body>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-orange-50 text-gray-800">
 
 <!-- Navbar -->
-<nav class="navbar">
-  <div class="logo"> Sweet Treats</div>
+<nav class="bg-white shadow-md py-4 px-6 flex justify-between items-center sticky top-0 z-50">
+  <div class="text-2xl font-bold text-orange-600">🍰 Sweet Treats</div>
 
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <!-- Mobile Menu Toggle -->
+  <div class="md:hidden text-2xl cursor-pointer text-orange-600" onclick="toggleMenu()">☰</div>
 
-  <ul class="menu">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="services.html">Services</a></li>
-  <li><a href="contact.html">Contact</a></li>
-</ul>
+  <!-- Menu -->
+  <ul id="menu" class="hidden md:flex space-x-8 font-medium text-gray-600">
+    <li><a href="index.html" class="hover:text-orange-600 transition">Home</a></li>
+    <li><a href="about.html" class="text-orange-600 font-bold underline decoration-2 underline-offset-4">About</a></li>
+    <li><a href="services.html" class="hover:text-orange-600 transition">Services</a></li>
+    <li><a href="contact.html" class="hover:text-orange-600 transition">Contact</a></li>
+  </ul>
 
-<div class="container">
+  <!-- Mobile Menu (Hidden) -->
+  <ul id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white border-t p-6 flex flex-col space-y-4 md:hidden shadow-lg">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="max-w-4xl mx-auto px-6 py-16">
 
   <!-- About Content -->
-  <section class="about">
-    <h1>About Us</h1>
-    <p>Welcome to Sweet Treats Bakery 🍰</p>
-    <p>We create fresh, delicious cakes for every occasion.</p>
+  <section class="text-center mb-20">
+    <h1 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 uppercase tracking-tight">About Us</h1>
+    <div class="w-20 h-1.5 bg-orange-500 mx-auto mb-8 rounded-full"></div>
+    <p class="text-xl md:text-2xl text-orange-800 font-medium mb-4 italic">Welcome to Sweet Treats Bakery 🍰</p>
+    <p class="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+      We create fresh, delicious cakes for every occasion. Our mission is to spread joy through every bite of our handcrafted treats.
+    </p>
   </section>
 
   <!-- Why Choose Us -->
-  <section class="why">
-    <h2>Why Choose Us</h2>
+  <section class="bg-white rounded-[3rem] p-10 md:p-16 shadow-xl border border-orange-100">
+    <h2 class="text-3xl font-bold text-center mb-12 uppercase text-gray-800 italic">Why Choose Us</h2>
 
-    <div class="card">🍰 Fresh Ingredients</div>
-    <div class="card">🚚 Fast Delivery</div>
-    <div class="card">😊 Custom designs</div>
-
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-orange-50 p-8 rounded-3xl text-center font-bold text-orange-900 border border-orange-200 hover:bg-orange-100 transition duration-300">
+        <div class="text-4xl mb-3">🍰</div>
+        Fresh Ingredients
+      </div>
+      
+      <div class="bg-orange-50 p-8 rounded-3xl text-center font-bold text-orange-900 border border-orange-200 hover:bg-orange-100 transition duration-300">
+        <div class="text-4xl mb-3">🚚</div>
+        Fast Delivery
+      </div>
+      
+      <div class="bg-orange-50 p-8 rounded-3xl text-center font-bold text-orange-900 border border-orange-200 hover:bg-orange-100 transition duration-300">
+        <div class="text-4xl mb-3">😊</div>
+        Custom Designs
+      </div>
+    </div>
   </section>
 
-</div> <!-- ✅ yeh close karna zaroori hai -->
+</div>
 
-<script src="input.js"></script>
+<footer class="bg-gray-900 text-white py-8 text-center mt-12">
+  <p class="opacity-70 text-sm tracking-widest uppercase">© 2026 Sweet Treats Bakery</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  }
+</script>
+
+</body>
+</html>
